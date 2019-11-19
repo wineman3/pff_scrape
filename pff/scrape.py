@@ -17,5 +17,8 @@ def main(event, context):
     pff_grade = (player_pff_results_json['player_grades'][0]['grade'])
     return {
         'statusCode': 200,
+        'headers': {
+        'Access-Control-Allow-Origin' : '*'
+        },
         'body': json.dumps(pff_grade)
     }
